@@ -55,4 +55,4 @@ projection but never calls `Schema.For<TDoc>()` for the view document type. The 
 
 ## Marten Version
 
-Tested with Marten **8.18.1** on .NET 9.0.
+Tested with Marten **8.22.2** on .NET 9.0.
