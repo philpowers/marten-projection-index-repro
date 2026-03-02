@@ -1,0 +1,92 @@
+# MacOS
+.DS_Store
+._*
+*.icloud
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+
+# .NET
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Node
+node_modules/
+dist/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs
+*.log
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+.eslintcache
+.stylelintcache
+*.tgz
+
+# Astro
+.astro
+
+# NextJS
+.pnp
+.pnp.js
+.vercel
+next-env.d.ts
+*.tsbuildinfo
+
+# NextJS
+.next
+out
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# VSCode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# VisualStudio
+*.suo
+*.user
+.vs/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+StyleCopReport.xml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.nupkg
+*.snupkg
+*.mdf
+*.ldf
+*.ndf
+*.sln.iml
