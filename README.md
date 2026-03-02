@@ -26,12 +26,13 @@ as expected for snapshot projections.
 dotnet test
 ```
 
-Expected output: **1 pass, 1 fail**.
+Expected output: **1 pass, 2 fail**.
 
-| Test | Result | Explanation |
-|------|--------|-------------|
-| `SnapshotView_ConfigureMarten_CreatesIndex` | Pass | `Snapshot<T>()` calls `Schema.For<T>()`, triggering `ConfigureMarten` |
-| `MultiStreamView_ConfigureMarten_CreatesIndex` | Fail | `Projections.Add<T>()` skips `Schema.For<TDoc>()`, so `ConfigureMarten` is never called |
+| Test | Result | Role |
+|------|--------|------|
+| `SnapshotView_ConfigureMarten_CreatesIndex` | Pass | Control - proves the convention works when `Snapshot<T>()` is used |
+| `MultiStreamView_ConfigureMarten_IsDiscovered` | Fail | Root cause - `ConfigureMarten` is never called |
+| `MultiStreamView_ConfigureMarten_CreatesIndex` | Fail | Consequence - the index it configures is never created |
 
 ## Project Structure
 
