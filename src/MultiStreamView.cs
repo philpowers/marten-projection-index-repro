@@ -11,6 +11,8 @@ namespace MartenRepro;
 /// </summary>
 public class TeamMembersView
 {
+    public static bool ConfigureMartenWasCalled { get; private set; }
+
     public string Id { get; set; } = "";
     public Guid TeamId { get; set; }
     public string UserId { get; set; } = "";
@@ -18,6 +20,7 @@ public class TeamMembersView
 
     public static void ConfigureMarten(DocumentMapping<TeamMembersView> mapping)
     {
+        ConfigureMartenWasCalled = true;
         mapping.Index(x => x.TeamId);
     }
 }

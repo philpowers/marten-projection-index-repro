@@ -9,12 +9,15 @@ namespace MartenRepro;
 /// </summary>
 public class TeamSummary
 {
+    public static bool ConfigureMartenWasCalled { get; private set; }
+
     public Guid Id { get; set; }
     public string Name { get; set; } = "";
     public DateTimeOffset CreatedAtUtc { get; set; }
 
     public static void ConfigureMarten(DocumentMapping<TeamSummary> mapping)
     {
+        ConfigureMartenWasCalled = true;
         mapping.Index(x => x.Name);
     }
 
